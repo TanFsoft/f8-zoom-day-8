@@ -27,7 +27,8 @@ h1::before {
     justify-content: flex-end;
 
     content: attr(data-text);
-    background: linear-gradient(to right, #7953cd 20%, #00affa 30%, #0190cd 70%, #764ada 80%);
+    color: orange;
+    /* background: linear-gradient(to right, #7953cd 20%, #00affa 30%, #0190cd 70%, #764ada 80%); */
     width: 0;
     white-space: nowrap;
     overflow: hidden;
