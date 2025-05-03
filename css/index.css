@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -13,6 +13,31 @@ body {
     align-items: center;
 }
 
+h1 {
+    display: inline-block;
+    position: relative;
+    transition: color 0.5s;
+}
+h1::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: flex-end;
+
+    content: attr(data-text);
+    background: linear-gradient(to right, #7953cd 20%, #00affa 30%, #0190cd 70%, #764ada 80%);
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+h1:hover::before {
+    left: 0;
+    width: 100%;
+    justify-content: flex-start;
+}
 .content {
     text-align: center;
     background-color: #ffffffdd;
@@ -49,5 +74,5 @@ a {
 }
 
 a:hover {
-    background-color: #357ABD;
+    background-color: #357abd;
 }
